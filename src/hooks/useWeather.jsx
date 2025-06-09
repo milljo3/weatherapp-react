@@ -1,6 +1,6 @@
 import {useCallback} from "react";
 
-const API_KEY = '2920fe3bb3f7a04eefb170f885d5a0bd';
+const API_KEY = '';
 
 export function useWeather(state, dispatch) {
     const fetchWeather = useCallback(async (city) => {

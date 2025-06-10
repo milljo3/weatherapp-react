@@ -21,27 +21,32 @@ function App() {
 
   return (
     <div className="app">
-      <h1>Weather App</h1>
-      <SearchForm
-        city={state.city}
-        onCityChange={(city) => dispatch({
-          type: "SET_CITY",
-          payload: city
-        })}
-        onSearch={() => fetchWeather(state.city)}
-      />
-      <UnitToggle
-        unit={state.unit}
-        onUnitChange={(unit) => dispatch({
-          type: "SET_UNIT",
-          payload: unit
-        })}
-      />
-      <WeatherDisplay
-        data={state.weatherData}
-        loading={state.loading}
-        error={state.error}
-      />
+      <h1>
+          Weather App
+      </h1>
+        <div className="weather-container">
+            <SearchForm
+                city={state.city}
+                onCityChange={(city) => dispatch({
+                    type: "SET_CITY",
+                    payload: city
+                })}
+                onSearch={() => fetchWeather(state.city)}
+            />
+            <UnitToggle
+                unit={state.unit}
+                onUnitChange={(unit) => dispatch({
+                    type: "SET_UNIT",
+                    payload: unit
+                })}
+            />
+            <WeatherDisplay
+                data={state.weatherData}
+                loading={state.loading}
+                error={state.error}
+                unit={state.unit}
+            />
+        </div>
     </div>
   )
 }

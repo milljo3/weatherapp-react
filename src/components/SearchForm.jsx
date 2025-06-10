@@ -5,7 +5,7 @@ export default function SearchForm ({city, onCityChange, onSearch}) {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="weather-form">
             <input
              value={city}
              onChange={(e) => onCityChange(e.target.value)}
